@@ -20,7 +20,7 @@ int itc_find_str(string str1, string str2)
     long long res;
     res = -1;
     for ( int i = 0; i < itc_len(str1); i++){
-        if (itc_slice_str(str1, i, i+itc_len(str2)) == str2){
+        if (itc_slice_str(str1, i, i + itc_len(str2)) == str2){
             res = i;
             break;
         }
@@ -40,24 +40,4 @@ string itc_three_str(string str1, string str2, string str3)
         return str1;
     }
 
-}
-
-int itc_max_char_on_end(string str)
-{
-    int che;
-    long long rest = 0;
-    long long countering =0;
-    for ( int i = 0; i < itc_len(str); i++){
-            che = str[i];
-        if ( che >= 48 && che <= 57){
-            countering += 1;
-        }
-        else{
-            if (countering > rest){
-                rest = countering;
-            }
-            countering = 0;
-        }
-     }
-     return rest;
 }
