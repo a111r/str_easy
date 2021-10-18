@@ -29,8 +29,10 @@ void itc_first_end_three(string str)
         for (int k = 3; k > 0; k--)
             cout << str[itc_len(str)-k];
 
-    }else{
-        for (int j = 0; j < itc_len(str); j++){
+    }
+        else
+        {
+        for (int = 0; j < itc_len(str); j++){
             cout << str[j];
         }
         cout << endl;
@@ -41,8 +43,9 @@ int itc_count_char_in_str(char ch, string str)
  {
     int res;
     res = 0;
-    for ( int i = 0; i < itc_len(str); i++){
-        if (str[i] == che)
+    for (int i = 0; i < itc_len(str); i++)
+    {
+        if (str[i] == ch)
             res++;
     }
     return res;
