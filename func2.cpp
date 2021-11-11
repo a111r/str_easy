@@ -78,4 +78,3 @@ long long itc_max_char_on_end(string str)
     if (luc > lu) lu = luc;
     return lu;
 }
-
