@@ -15,10 +15,11 @@ long long itc_len(string str)
  }
 
 void itc_print_copy_str(string str, int number)
- {
-     for(int i = 0; i < number; i++)
+{
+    for (int i=0; i < number; i++){
         cout << str << endl;
- }
+    }
+}
 
 void itc_first_end_three(string str)
  {
