@@ -59,9 +59,13 @@ string itc_three_str(string str1, string str2, string str3)
 
 
 int itc_max_char_on_end(string str) {
-    int lu = 0, luc = 0, a = 0;
+    int lu, luc, a;
+    lu = 0;
+    luc = 0;
+    a = 0 ;
     while (str[a] != '\0'){
-        if (str[a] >= '0' && str[a] <= '9') luc++;
+        if (str[a] >= '0' && str[a] <= '9')
+            luc++;
         else {
             if (luc > lu) lu = luc;
             luc = 0;
