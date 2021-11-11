@@ -17,16 +17,26 @@ string itc_cmp_str(string str1, string str2, int num)
 
 int itc_find_str(string str1, string str2)
 {
-    long long res;
+    int i1,i2,res;
+    i1 = 0;
     res = -1;
-    for ( int i = 0; i < itc_len(str1); i++){
-        if (itc_slice_str(str1, i, i + itc_len(str2)) == str2){
-            res = i;
-            break;
+    bool started = false;
+    bool in = false;
+    while (str1[i1] != '\0')
+    {
+        if (str1[i1] == str2[0] && !started){
+            started = true;
+            i2 = 0;
+            res = i1;
         }
+        if (started) {
+            if (i2 == itc_len(str2) - 1) return res;
+            if (str2[i2] != str1[i1]) started = false;
+            i2 += 1;
+        }
+        i1 += 1;
     }
-    return res;
-
+    return -1;
 }
 
 string itc_three_str(string str1, string str2, string str3)
