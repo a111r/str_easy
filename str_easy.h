@@ -19,7 +19,7 @@ string itc_cmp_str(string str12, string str23, int numm);
 
 long long itc_find_str(string str12, string str23);
 string itc_three_str(string str12, string str23, string str34);
-long long itc_max_char_on_end(string str);
+int itc_max_char_on_end(string str);
 
 
 
