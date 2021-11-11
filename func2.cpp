@@ -32,8 +32,10 @@ int itc_find_str(string str1, string str2)
             res = i1;
         }
         if (started) {
-            if (i2 == itc_len(str2) - 1) return res;
-            if (str2[i2] != str1[i1]) started = false;
+            if (i2 == itc_len(str2) - 1) 
+                return res;
+            if (str2[i2] != str1[i1]) 
+                started = false;
             i2 += 1;
         }
         i1 += 1;
