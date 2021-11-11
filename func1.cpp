@@ -2,31 +2,38 @@
 
 string itc_even_place(string str)
 {
-    string res = "";
-    for (int i = 0; i < itc_len(str); i += 2)
-        res += str[i];
-    return res;
+    int i;
+    i = 0;
+    string newstring = "";
+    while (str[i] != '\0')
+    {
+        if (i % 2 == 0)
+            newstring += str[i];
+        i += 1;
+    }
+    return newstring;
 }
 
 
 double itc_percent_lower_uppercase(string str)
 {
-    long long big;
-    big = 0;
-    long long small;
-    small = 0;
-    for ( int i = 0; i < itc_len(str); i++){
-        int ch;
-        ch = str[i];
-        if ( ch <= 90 && ch >= 65)
-            big++;
-        else if(ch <= 122 && ch >= 97)
-            small++;
-        return big/small * 100;
+    double low; 
+    low = 0;
+    double up;
+    up = 0;
+    int i;
+    i = 0;
+    int newchar;
+    while (str[i] != '\0'){
+        newchar = str[i];
+        if (newchar >= 65 && newchar <= 90) 
+            upp += 1;
+        if (newchar >= 97 && newchar <= 122)
+            low += 1;
+        i += 1;
     }
-
+    return up / low;
 }
-
 string itc_reverse_str(string str)
 {
     string res = "";
