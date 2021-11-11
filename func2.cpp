@@ -9,7 +9,7 @@ string itc_cmp_str(string str, string str1, int number) {
     for (int i = 0; str1[i] != '\0'; i++) 
         a += str1[i]; 
     for (int i = number; str[i] != '\0'; i++) 
-        a += str12[i]; 
+        a += str[i]; 
     for (int i = 0; i < itc_len(str); i++)
         b += a[i]; 
     return b; 
