@@ -31,7 +31,7 @@ void itc_first_end_three(string str)
     }
         else
         {
-        for (int i = 0; j < itc_len(str); j++){
+        for (int j = 0; j < itc_len(str); j++){
             cout << str[j];
         }
         cout << endl;
