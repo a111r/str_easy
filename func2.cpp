@@ -1,19 +1,21 @@
 #include "str_easy.h"
 
-string itc_cmp_str(string str1, string str2, int num)
-{
-    string res = "";
-    for ( int i = 0; i < num-1;i++){
-        res += str12[i];
-    }
-    res += str23;
-  for ( int j = num-1; j< itc_len(str12);j++){
-      res += str12[j];
-  }
-  return res;
-
-
+string itc_cmp_str(string str, string str1, int number) { 
+    string a, b; 
+    if (itc_len(str) < number || number < 0) 
+        return str; 
+    for (int i = 0; i < number; i++)
+        a += str[i]; 
+    for (int i = 0; str1[i] != '\0'; i++) 
+        a += str1[i]; 
+    for (int i = number; str[i] != '\0'; i++) 
+        a += str12[i]; 
+    for (int i = 0; i < itc_len(str); i++)
+        b += a[i]; 
+    return b; 
 }
+
+
 
 int itc_find_str(string str1, string str2)
 {
