@@ -27,7 +27,7 @@ double itc_percent_lower_uppercase(string str)
     while (str[i] != '\0'){
         newchar = str[i];
         if (newchar >= 65 && newchar <= 90) 
-            upp += 1;
+            up += 1;
         if (newchar >= 97 && newchar <= 122)
             low += 1;
         i += 1;
