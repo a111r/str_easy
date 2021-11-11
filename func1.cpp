@@ -1,3 +1,4 @@
+
 #include "str_easy.h"
 
 string itc_even_place(string str)
@@ -17,7 +18,7 @@ string itc_even_place(string str)
 
 double itc_percent_lower_uppercase(string str)
 {
-    double low; 
+    double low;
     low = 0;
     double up;
     up = 0;
@@ -26,7 +27,7 @@ double itc_percent_lower_uppercase(string str)
     int newchar;
     while (str[i] != '\0'){
         newchar = str[i];
-        if (newchar >= 65 && newchar <= 90) 
+        if (newchar >= 65 && newchar <= 90)
             up += 1;
         if (newchar >= 97 && newchar <= 122)
             low += 1;
@@ -47,8 +48,8 @@ string itc_slice_str(string str, int start, int end)
 {
     string res ="";
     if ( end >= itc_len(str))
-        end = itc_len(str); 
-    for ( int i = start; i < end; i++)
+        end = itc_len(str);
+    for ( int i = start; i < end; i++)ko
         res += str[i];
     return res;
 }
