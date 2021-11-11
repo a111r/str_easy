@@ -1,18 +1,18 @@
 #include "str_easy.h"
 
-string itc_cmp_str(string str, string str1, int number) { 
-    string a, b; 
-    if (itc_len(str) < number || number < 0) 
-        return str; 
+string itc_cmp_str(string str, string str1, int number) {
+    string a, b;
+    if (itc_len(str) < number || number < 0)
+        return str;
     for (int i = 0; i < number; i++)
-        a += str[i]; 
-    for (int i = 0; str1[i] != '\0'; i++) 
-        a += str1[i]; 
-    for (int i = number; str[i] != '\0'; i++) 
-        a += str[i]; 
+        a += str[i];
+    for (int i = 0; str1[i] != '\0'; i++)
+        a += str1[i];
+    for (int i = number; str[i] != '\0'; i++)
+        a += str[i];
     for (int i = 0; i < itc_len(str); i++)
-        b += a[i]; 
-    return b; 
+        b += a[i];
+    return b;
 }
 
 
@@ -32,10 +32,8 @@ int itc_find_str(string str1, string str2)
             res = i1;
         }
         if (started) {
-            if (i2 == itc_len(str2) - 1) 
-                return res;
-            if (str2[i2] != str1[i1]) 
-                started = false;
+            if (i2 == itc_len(str2) - 1) return res;
+            if (str2[i2] != str1[i1]) started = false;
             i2 += 1;
         }
         i1 += 1;
@@ -50,9 +48,9 @@ string itc_three_str(string str1, string str2, string str3)
     start = itc_find_str(str1, str2);
     while (str1[i] != '\0'){
         start = itc_find_str(str1, str2);
-        if (start == -1) 
+        if (start == -1)
             i += 1;
-        else 
+        else
         {
         str1 = itc_slice_str(str1, 0, start - 1) + str3 + itc_slice_str(str1, start + itc_len(str2), itc_len(str1));
         i = start + itc_len(str2);
@@ -62,7 +60,8 @@ string itc_three_str(string str1, string str2, string str3)
 }
 
 
-int itc_max_char_on_end(string str) {
+long long itc_max_char_on_end(string str)
+{
     int lu, luc, a;
     lu = 0;
     luc = 0;
@@ -79,3 +78,4 @@ int itc_max_char_on_end(string str) {
     if (luc > lu) lu = luc;
     return lu;
 }
+
