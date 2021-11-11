@@ -7,11 +7,11 @@ string itc_hello_str(string name)
 
 long long itc_len(string str)
  {
-     int i;
-     i = 0;
-     while(str[i] != '\0')
-        i++;
-     return i;
+    int i = 0;
+    while (str[i] != '\0'){
+        i += 1;
+    }
+    return i;
  }
 
 void itc_print_copy_str(string str, int number)
